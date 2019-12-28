@@ -10,7 +10,7 @@
             <th>Role</th>
             <th></th>
         </tr>
-        </thead>l
+        </thead>
         <tbody>
         <#list users as user>
             <tr>
