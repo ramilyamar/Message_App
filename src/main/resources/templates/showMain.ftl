@@ -48,7 +48,7 @@
                 <div>
                     <div>
                         <#if message.filename??>
-                            <img src="/img/${message.filename}" class="card-img-top" width="80" height="200">
+                            <img src="/img/${message.filename}" class="card-img-top">
                         </#if>
                     </div>
 
