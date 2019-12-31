@@ -33,11 +33,11 @@ public class MainController {
 
     @GetMapping("/main")
     public String showMain(@RequestParam(required = false, defaultValue = "") String filter, Model model) {
-        Iterable<Message> messages = messageRepo.findAll();
+        Iterable<Message> messages;
         if (filter != null && !filter.isEmpty()) {
             messages = messageRepo.findByTag(filter);
         } else {
-            messages = messageRepo.findAll();
+            messages = messageRepo.findAllByOrderByIdDesc();
         }
         model.addAttribute("messages", messages);
         model.addAttribute("filter", filter);
